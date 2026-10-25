@@ -1,0 +1,318 @@
+{
+	"id": "mbFixtureAllOps01",
+	"name": "fixture: all operations",
+	"active": false,
+	"settings": {},
+	"nodes": [
+		{
+			"id": "manual",
+			"name": "Manual",
+			"type": "n8n-nodes-base.manualTrigger",
+			"typeVersion": 1,
+			"position": [
+				0,
+				0
+			],
+			"parameters": {}
+		},
+		{
+			"id": "GetFromList",
+			"name": "Get From List",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				200,
+				0
+			],
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"parameters": {
+				"resource": "artist",
+				"operation": "get",
+				"artistId": {
+					"__rl": true,
+					"mode": "list",
+					"value": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+					"cachedResultName": "Nirvana"
+				},
+				"options": {
+					"include": [
+						"aliases",
+						"url-rels"
+					]
+				}
+			},
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "Wait1",
+			"name": "Wait 1",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				400,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5,
+				"unit": "seconds"
+			}
+		},
+		{
+			"id": "GetByIDRaw",
+			"name": "Get By ID Raw",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				600,
+				0
+			],
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"parameters": {
+				"resource": "artist",
+				"operation": "get",
+				"artistId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "5b11f4ce-a62d-471e-81fc-a69a8278c7da"
+				},
+				"output": "raw"
+			},
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "Wait2",
+			"name": "Wait 2",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				800,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5,
+				"unit": "seconds"
+			}
+		},
+		{
+			"id": "GetByURLFields",
+			"name": "Get By URL Fields",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				1000,
+				0
+			],
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"parameters": {
+				"resource": "artist",
+				"operation": "get",
+				"artistId": {
+					"__rl": true,
+					"mode": "url",
+					"value": "https://musicbrainz.org/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da/relationships?tab=1"
+				},
+				"output": "fields",
+				"fields": [
+					"name",
+					"country"
+				]
+			},
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "Wait3",
+			"name": "Wait 3",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				1200,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5,
+				"unit": "seconds"
+			}
+		},
+		{
+			"id": "SearchLimit3",
+			"name": "Search Limit 3",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				1400,
+				0
+			],
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"parameters": {
+				"resource": "artist",
+				"operation": "search",
+				"query": "artist:nirvana",
+				"limit": 3
+			},
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "Wait4",
+			"name": "Wait 4",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				1600,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5,
+				"unit": "seconds"
+			}
+		},
+		{
+			"id": "GetManyReturnAll",
+			"name": "Get Many Return All",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				1800,
+				0
+			],
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"parameters": {
+				"resource": "artist",
+				"operation": "getAll",
+				"linkedTo": "release-group",
+				"linkedId": "1b022e01-4da6-387b-8658-8678046e4cef",
+				"returnAll": true
+			},
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		}
+	],
+	"connections": {
+		"Manual": {
+			"main": [
+				[
+					{
+						"node": "Get From List",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Get From List": {
+			"main": [
+				[
+					{
+						"node": "Wait 1",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait 1": {
+			"main": [
+				[
+					{
+						"node": "Get By ID Raw",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Get By ID Raw": {
+			"main": [
+				[
+					{
+						"node": "Wait 2",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait 2": {
+			"main": [
+				[
+					{
+						"node": "Get By URL Fields",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Get By URL Fields": {
+			"main": [
+				[
+					{
+						"node": "Wait 3",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait 3": {
+			"main": [
+				[
+					{
+						"node": "Search Limit 3",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Search Limit 3": {
+			"main": [
+				[
+					{
+						"node": "Wait 4",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait 4": {
+			"main": [
+				[
+					{
+						"node": "Get Many Return All",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	}
+}

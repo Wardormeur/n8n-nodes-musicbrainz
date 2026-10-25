@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-musicbrainz.musicBrainz",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Data & Storage"],
+	"resources": {
+		"credentialDocumentation": [
+			{ "url": "https://musicbrainz.org/doc/MusicBrainz_API/Rate_Limiting" }
+		],
+		"primaryDocumentation": [
+			{ "url": "https://github.com/wardormeur/n8n-nodes-musicbrainz#readme" }
+		]
+	}
+}

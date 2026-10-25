@@ -1,0 +1,2072 @@
+{
+	"id": "mbFixtureEntities1",
+	"name": "MusicBrainz fixture: all entities",
+	"nodes": [
+		{
+			"id": "start",
+			"name": "Start",
+			"type": "n8n-nodes-base.manualTrigger",
+			"typeVersion": 1,
+			"position": [
+				0,
+				0
+			],
+			"parameters": {}
+		},
+		{
+			"id": "s0",
+			"name": "area: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				440,
+				0
+			],
+			"parameters": {
+				"resource": "area",
+				"operation": "get",
+				"areaId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "6a264f94-6ff1-30b1-9a81-41f7bfabd616"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c0",
+			"name": "Check: area: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				660,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c0c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '6a264f94-6ff1-30b1-9a81-41f7bfabd616'))($('area: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f0",
+			"name": "Failed: area: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				660,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"area: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 6a264f94-6ff1-30b1-9a81-41f7bfabd616\", (items[0].id === '6a264f94-6ff1-30b1-9a81-41f7bfabd616')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('area: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w1",
+			"name": "Wait before artist: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				770,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s1",
+			"name": "artist: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				880,
+				0
+			],
+			"parameters": {
+				"resource": "artist",
+				"operation": "get",
+				"artistId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "5b11f4ce-a62d-471e-81fc-a69a8278c7da"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c1",
+			"name": "Check: artist: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				1100,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c1c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '5b11f4ce-a62d-471e-81fc-a69a8278c7da'))($('artist: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f1",
+			"name": "Failed: artist: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				1100,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"artist: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 5b11f4ce-a62d-471e-81fc-a69a8278c7da\", (items[0].id === '5b11f4ce-a62d-471e-81fc-a69a8278c7da')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('artist: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w2",
+			"name": "Wait before event: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				1210,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s2",
+			"name": "event: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				1320,
+				0
+			],
+			"parameters": {
+				"resource": "event",
+				"operation": "get",
+				"eventId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "27ba6fd7-60af-4c38-8128-27053c8dc130"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c2",
+			"name": "Check: event: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				1540,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c2c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '27ba6fd7-60af-4c38-8128-27053c8dc130'))($('event: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f2",
+			"name": "Failed: event: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				1540,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"event: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 27ba6fd7-60af-4c38-8128-27053c8dc130\", (items[0].id === '27ba6fd7-60af-4c38-8128-27053c8dc130')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('event: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w3",
+			"name": "Wait before instrument: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				1650,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s3",
+			"name": "instrument: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				1760,
+				0
+			],
+			"parameters": {
+				"resource": "instrument",
+				"operation": "get",
+				"instrumentId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "b3eac5f9-7859-4416-ac39-7154e2e8d348"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c3",
+			"name": "Check: instrument: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				1980,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c3c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === 'b3eac5f9-7859-4416-ac39-7154e2e8d348'))($('instrument: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f3",
+			"name": "Failed: instrument: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				1980,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"instrument: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is b3eac5f9-7859-4416-ac39-7154e2e8d348\", (items[0].id === 'b3eac5f9-7859-4416-ac39-7154e2e8d348')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('instrument: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w4",
+			"name": "Wait before label: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				2090,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s4",
+			"name": "label: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				2200,
+				0
+			],
+			"parameters": {
+				"resource": "label",
+				"operation": "get",
+				"labelId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "38dc88de-7720-4100-9d5b-3cdc41b0c474"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c4",
+			"name": "Check: label: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				2420,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c4c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '38dc88de-7720-4100-9d5b-3cdc41b0c474'))($('label: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f4",
+			"name": "Failed: label: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				2420,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"label: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 38dc88de-7720-4100-9d5b-3cdc41b0c474\", (items[0].id === '38dc88de-7720-4100-9d5b-3cdc41b0c474')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('label: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w5",
+			"name": "Wait before place: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				2530,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s5",
+			"name": "place: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				2640,
+				0
+			],
+			"parameters": {
+				"resource": "place",
+				"operation": "get",
+				"placeId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "bea135c0-a32e-49be-85fd-9234c73fa0a8"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c5",
+			"name": "Check: place: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				2860,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c5c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === 'bea135c0-a32e-49be-85fd-9234c73fa0a8'))($('place: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f5",
+			"name": "Failed: place: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				2860,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"place: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is bea135c0-a32e-49be-85fd-9234c73fa0a8\", (items[0].id === 'bea135c0-a32e-49be-85fd-9234c73fa0a8')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('place: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w6",
+			"name": "Wait before recording: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				2970,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s6",
+			"name": "recording: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				3080,
+				0
+			],
+			"parameters": {
+				"resource": "recording",
+				"operation": "get",
+				"recordingId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "a71c683a-a4d2-4f03-84e2-63499ae64ed2"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c6",
+			"name": "Check: recording: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				3300,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c6c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === 'a71c683a-a4d2-4f03-84e2-63499ae64ed2'))($('recording: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f6",
+			"name": "Failed: recording: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				3300,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"recording: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is a71c683a-a4d2-4f03-84e2-63499ae64ed2\", (items[0].id === 'a71c683a-a4d2-4f03-84e2-63499ae64ed2')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('recording: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w7",
+			"name": "Wait before release: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				3410,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s7",
+			"name": "release: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				3520,
+				0
+			],
+			"parameters": {
+				"resource": "release",
+				"operation": "get",
+				"releaseId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "b52a8f31-b5ab-34e9-92f4-f5b7110220f0"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c7",
+			"name": "Check: release: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				3740,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c7c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === 'b52a8f31-b5ab-34e9-92f4-f5b7110220f0'))($('release: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f7",
+			"name": "Failed: release: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				3740,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"release: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is b52a8f31-b5ab-34e9-92f4-f5b7110220f0\", (items[0].id === 'b52a8f31-b5ab-34e9-92f4-f5b7110220f0')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('release: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w8",
+			"name": "Wait before release-group: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				3850,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s8",
+			"name": "release-group: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				3960,
+				0
+			],
+			"parameters": {
+				"resource": "release-group",
+				"operation": "get",
+				"releaseGroupId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "1b022e01-4da6-387b-8658-8678046e4cef"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c8",
+			"name": "Check: release-group: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				4180,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c8c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '1b022e01-4da6-387b-8658-8678046e4cef'))($('release-group: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f8",
+			"name": "Failed: release-group: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				4180,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"release-group: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 1b022e01-4da6-387b-8658-8678046e4cef\", (items[0].id === '1b022e01-4da6-387b-8658-8678046e4cef')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('release-group: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w9",
+			"name": "Wait before series: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				4290,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s9",
+			"name": "series: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				4400,
+				0
+			],
+			"parameters": {
+				"resource": "series",
+				"operation": "get",
+				"seriesId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "117dffca-027e-4f60-8063-91896471603d"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c9",
+			"name": "Check: series: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				4620,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c9c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '117dffca-027e-4f60-8063-91896471603d'))($('series: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f9",
+			"name": "Failed: series: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				4620,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"series: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 117dffca-027e-4f60-8063-91896471603d\", (items[0].id === '117dffca-027e-4f60-8063-91896471603d')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('series: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w10",
+			"name": "Wait before work: Get",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				4730,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s10",
+			"name": "work: Get",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				4840,
+				0
+			],
+			"parameters": {
+				"resource": "work",
+				"operation": "get",
+				"workId": {
+					"__rl": true,
+					"mode": "id",
+					"value": "9840e142-269d-3fa3-9805-041a9235c18a"
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c10",
+			"name": "Check: work: Get",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				5060,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c10c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items[0].id === '9840e142-269d-3fa3-9805-041a9235c18a'))($('work: Get').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f10",
+			"name": "Failed: work: Get",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				5060,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"work: Get: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"id is 9840e142-269d-3fa3-9805-041a9235c18a\", (items[0].id === '9840e142-269d-3fa3-9805-041a9235c18a')]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('work: Get').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w11",
+			"name": "Wait before release: Get by URL + includes",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				5170,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s11",
+			"name": "release: Get by URL + includes",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				5280,
+				0
+			],
+			"parameters": {
+				"resource": "release",
+				"operation": "get",
+				"releaseId": {
+					"__rl": true,
+					"mode": "url",
+					"value": "https://musicbrainz.org/release/b52a8f31-b5ab-34e9-92f4-f5b7110220f0/cover-art"
+				},
+				"options": {
+					"include": [
+						"labels",
+						"recordings",
+						"url-rels"
+					]
+				}
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c11",
+			"name": "Check: release: Get by URL + includes",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				5500,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c11c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 1) && (items.every((j) => [\"id\",\"label-info\",\"media\",\"relations\"].every((k) => k in j))))($('release: Get by URL + includes').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f11",
+			"name": "Failed: release: Get by URL + includes",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				5500,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"release: Get by URL + includes: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 1 item(s)\", (items.length === 1)], [\"keys id, label-info, media, relations\", (items.every((j) => [\"id\",\"label-info\",\"media\",\"relations\"].every((k) => k in j)))]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('release: Get by URL + includes').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w12",
+			"name": "Wait before recording: Search",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				5610,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s12",
+			"name": "recording: Search",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				5720,
+				0
+			],
+			"parameters": {
+				"resource": "recording",
+				"operation": "search",
+				"query": "recording:\"Smells Like Teen Spirit\" AND artist:Nirvana",
+				"limit": 3
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c12",
+			"name": "Check: recording: Search",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				5940,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c12c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 3) && (items.every((j) => [\"id\",\"title\"].every((k) => k in j))))($('recording: Search').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f12",
+			"name": "Failed: recording: Search",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				5940,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"recording: Search: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 3 item(s)\", (items.length === 3)], [\"keys id, title\", (items.every((j) => [\"id\",\"title\"].every((k) => k in j)))]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('recording: Search').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w13",
+			"name": "Wait before release-group: Get Many (albums)",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				6050,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s13",
+			"name": "release-group: Get Many (albums)",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				6160,
+				0
+			],
+			"parameters": {
+				"resource": "release-group",
+				"operation": "getAll",
+				"linkedTo": "artist",
+				"linkedId": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+				"browseFilters": {
+					"type": [
+						"album"
+					]
+				},
+				"limit": 5
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c13",
+			"name": "Check: release-group: Get Many (albums)",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				6380,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c13c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 5) && (items.every((j) => j['primary-type'] === 'Album')))($('release-group: Get Many (albums)').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f13",
+			"name": "Failed: release-group: Get Many (albums)",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				6380,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"release-group: Get Many (albums): expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 5 item(s)\", (items.length === 5)], [\"all albums\", (items.every((j) => j['primary-type'] === 'Album'))]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('release-group: Get Many (albums)').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w14",
+			"name": "Wait before release: Get Many (official, Return All)",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				6490,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s14",
+			"name": "release: Get Many (official, Return All)",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				6600,
+				0
+			],
+			"parameters": {
+				"resource": "release",
+				"operation": "getAll",
+				"linkedTo": "release-group",
+				"linkedId": "1b022e01-4da6-387b-8658-8678046e4cef",
+				"browseFilters": {
+					"status": [
+						"official"
+					]
+				},
+				"returnAll": true
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c14",
+			"name": "Check: release: Get Many (official, Return All)",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				6820,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c14c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length >= 26) && (items.every((j) => j.status === 'Official')))($('release: Get Many (official, Return All)').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f14",
+			"name": "Failed: release: Get Many (official, Return All)",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				6820,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"release: Get Many (official, Return All): expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"at least 26 item(s)\", (items.length >= 26)], [\"all official\", (items.every((j) => j.status === 'Official'))]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('release: Get Many (official, Return All)').all().map((i) => i.json)) }}"
+			}
+		},
+		{
+			"id": "w15",
+			"name": "Wait before work: Get Many",
+			"type": "n8n-nodes-base.wait",
+			"typeVersion": 1.1,
+			"position": [
+				6930,
+				-200
+			],
+			"executeOnce": true,
+			"parameters": {
+				"amount": 2.5
+			}
+		},
+		{
+			"id": "s15",
+			"name": "work: Get Many",
+			"type": "CUSTOM.musicBrainz",
+			"typeVersion": 1,
+			"position": [
+				7040,
+				0
+			],
+			"parameters": {
+				"resource": "work",
+				"operation": "getAll",
+				"linkedTo": "artist",
+				"linkedId": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+				"limit": 3
+			},
+			"credentials": {
+				"musicBrainzApi": "auto"
+			},
+			"executeOnce": true,
+			"alwaysOutputData": true,
+			"retryOnFail": true,
+			"maxTries": 3,
+			"waitBetweenTries": 5000
+		},
+		{
+			"id": "c15",
+			"name": "Check: work: Get Many",
+			"type": "n8n-nodes-base.if",
+			"typeVersion": 2.3,
+			"position": [
+				7260,
+				0
+			],
+			"executeOnce": true,
+			"parameters": {
+				"conditions": {
+					"options": {
+						"caseSensitive": true,
+						"leftValue": "",
+						"typeValidation": "strict",
+						"version": 3
+					},
+					"conditions": [
+						{
+							"id": "c15c",
+							"leftValue": "={{ ((items) => (items.every((j) => !j.error)) && (items.length === 3) && (items.every((j) => [\"id\",\"title\"].every((k) => k in j))))($('work: Get Many').all().map((i) => i.json)) }}",
+							"rightValue": "",
+							"operator": {
+								"type": "boolean",
+								"operation": "true",
+								"singleValue": true
+							}
+						}
+					],
+					"combinator": "and"
+				},
+				"options": {}
+			}
+		},
+		{
+			"id": "f15",
+			"name": "Failed: work: Get Many",
+			"type": "n8n-nodes-base.stopAndError",
+			"typeVersion": 1,
+			"position": [
+				7260,
+				200
+			],
+			"parameters": {
+				"errorMessage": "={{ ((items) => \"work: Get Many: expected \" + [[\"no error\", (items.every((j) => !j.error))], [\"exactly 3 item(s)\", (items.length === 3)], [\"keys id, title\", (items.every((j) => [\"id\",\"title\"].every((k) => k in j)))]].filter((pair) => !pair[1]).map((pair) => pair[0]).join(', ') + '; got ' + JSON.stringify(items).slice(0, 400))($('work: Get Many').all().map((i) => i.json)) }}"
+			}
+		}
+	],
+	"connections": {
+		"Start": {
+			"main": [
+				[
+					{
+						"node": "area: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"area: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: area: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: area: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before artist: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: area: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before artist: Get": {
+			"main": [
+				[
+					{
+						"node": "artist: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"artist: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: artist: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: artist: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before event: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: artist: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before event: Get": {
+			"main": [
+				[
+					{
+						"node": "event: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"event: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: event: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: event: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before instrument: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: event: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before instrument: Get": {
+			"main": [
+				[
+					{
+						"node": "instrument: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"instrument: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: instrument: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: instrument: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before label: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: instrument: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before label: Get": {
+			"main": [
+				[
+					{
+						"node": "label: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"label: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: label: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: label: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before place: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: label: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before place: Get": {
+			"main": [
+				[
+					{
+						"node": "place: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"place: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: place: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: place: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before recording: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: place: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before recording: Get": {
+			"main": [
+				[
+					{
+						"node": "recording: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"recording: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: recording: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: recording: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before release: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: recording: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before release: Get": {
+			"main": [
+				[
+					{
+						"node": "release: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"release: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: release: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: release: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before release-group: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: release: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before release-group: Get": {
+			"main": [
+				[
+					{
+						"node": "release-group: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"release-group: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: release-group: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: release-group: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before series: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: release-group: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before series: Get": {
+			"main": [
+				[
+					{
+						"node": "series: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"series: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: series: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: series: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before work: Get",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: series: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before work: Get": {
+			"main": [
+				[
+					{
+						"node": "work: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"work: Get": {
+			"main": [
+				[
+					{
+						"node": "Check: work: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: work: Get": {
+			"main": [
+				[
+					{
+						"node": "Wait before release: Get by URL + includes",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: work: Get",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before release: Get by URL + includes": {
+			"main": [
+				[
+					{
+						"node": "release: Get by URL + includes",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"release: Get by URL + includes": {
+			"main": [
+				[
+					{
+						"node": "Check: release: Get by URL + includes",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: release: Get by URL + includes": {
+			"main": [
+				[
+					{
+						"node": "Wait before recording: Search",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: release: Get by URL + includes",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before recording: Search": {
+			"main": [
+				[
+					{
+						"node": "recording: Search",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"recording: Search": {
+			"main": [
+				[
+					{
+						"node": "Check: recording: Search",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: recording: Search": {
+			"main": [
+				[
+					{
+						"node": "Wait before release-group: Get Many (albums)",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: recording: Search",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before release-group: Get Many (albums)": {
+			"main": [
+				[
+					{
+						"node": "release-group: Get Many (albums)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"release-group: Get Many (albums)": {
+			"main": [
+				[
+					{
+						"node": "Check: release-group: Get Many (albums)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: release-group: Get Many (albums)": {
+			"main": [
+				[
+					{
+						"node": "Wait before release: Get Many (official, Return All)",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: release-group: Get Many (albums)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before release: Get Many (official, Return All)": {
+			"main": [
+				[
+					{
+						"node": "release: Get Many (official, Return All)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"release: Get Many (official, Return All)": {
+			"main": [
+				[
+					{
+						"node": "Check: release: Get Many (official, Return All)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: release: Get Many (official, Return All)": {
+			"main": [
+				[
+					{
+						"node": "Wait before work: Get Many",
+						"type": "main",
+						"index": 0
+					}
+				],
+				[
+					{
+						"node": "Failed: release: Get Many (official, Return All)",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Wait before work: Get Many": {
+			"main": [
+				[
+					{
+						"node": "work: Get Many",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"work: Get Many": {
+			"main": [
+				[
+					{
+						"node": "Check: work: Get Many",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		},
+		"Check: work: Get Many": {
+			"main": [
+				[],
+				[
+					{
+						"node": "Failed: work: Get Many",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	},
+	"settings": {}
+}
