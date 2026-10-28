@@ -107,6 +107,12 @@ npm run test:fixtures   # the workflows in test/fixtures, which check themselves
 `test:e2e` runs the node through n8n's engine and checks the number of real
 HTTP calls with Retry On Fail off (1) and on with 3 tries (3).
 
+### Releasing
+
+`npm version patch` (or `minor`/`major`), then `git push --follow-tags`. The
+tag starts `.github/workflows/publish.yml`, which lints, builds, tests and
+publishes to npm with a provenance statement.
+
 ## License
 
 MIT
