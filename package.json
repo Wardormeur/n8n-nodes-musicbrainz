@@ -6,14 +6,14 @@
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/wardormeur/n8n-nodes-musicbrainz",
+	"homepage": "https://github.com/Wardormeur/n8n-nodes-musicbrainz",
 	"author": {
 		"name": "Wardormeur",
 		"email": "wardormeur@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/wardormeur/n8n-nodes-musicbrainz.git"
+		"url": "git+https://github.com/Wardormeur/n8n-nodes-musicbrainz.git"
 	},
 	"main": "index.js",
 	"scripts": {
