@@ -1,0 +1,496 @@
+{
+  "root": "https://docs.n8n.io/connect/create-nodes",
+  "last_full_refresh": "2026-09-05",
+  "pages": [
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes.md",
+      "file": "00-overview.md",
+      "note": "top-level index, lists the 5 stages"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/overview.md",
+      "file": "00-overview.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/plan-your-node.md",
+      "file": "01-plan-your-node.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-type.md",
+      "file": "02-choose-node-type.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-a-node-building-style.md",
+      "file": "03-choose-building-style.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/plan-your-node/node-ui-design.md",
+      "file": "04-node-ui-design.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/plan-your-node/choose-node-file-structure.md",
+      "file": "05-file-structure.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node.md",
+      "file": "06-build-your-node.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference.md",
+      "file": "06-build-your-node.md",
+      "note": "reference index, links folded into the same file"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md",
+      "file": "07c-node-cli-tool.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node.md",
+      "file": "07-tutorial-declarative.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md",
+      "file": "07b-tutorial-programmatic.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files.md",
+      "file": "08-reference-base-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files/structure.md",
+      "file": "08-reference-base-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md",
+      "file": "08-reference-base-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files/declarative-style-parameters.md",
+      "file": "08-reference-base-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-parameters.md",
+      "file": "08-reference-base-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/base-files/programmatic-style-execute-method.md",
+      "file": "07b-tutorial-programmatic.md",
+      "note": "confirmed stub upstream (one sentence + a link to item-linking.md) - the real contract is captured via the worked tutorial instead"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/versioning.md",
+      "file": "08d-reference-versioning.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/error-handling.md",
+      "file": "08e-reference-error-handling.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/item-linking.md",
+      "file": "08f-reference-item-linking.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/codex-files.md",
+      "file": "09-reference-codex-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/credentials-files.md",
+      "file": "10-reference-credentials-files.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/node-ui-elements.md",
+      "file": "11-reference-ui-elements.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/verification-guidelines.md",
+      "file": "18-reference-verification-guidelines.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/build-your-node/reference/ux-guidelines.md",
+      "file": "19-reference-ux-guidelines.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/test-your-node.md",
+      "file": "12-test-your-node.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/test-your-node/run-your-node-locally.md",
+      "file": "13-run-locally.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/test-your-node/node-linter.md",
+      "file": "14-node-linter.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/test-your-node/troubleshooting.md",
+      "file": "20-troubleshooting.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/deploy-your-node.md",
+      "file": "15-deploy-your-node.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/deploy-your-node/submit-community-nodes.md",
+      "file": "16-submit-community.md"
+    },
+    {
+      "url": "https://docs.n8n.io/connect/create-nodes/deploy-your-node/install-private-nodes.md",
+      "file": "17-install-private.md"
+    },
+    {
+      "url": "https://docs.n8n.io/build/understand-workflows/workflow-components/work-with-nodes",
+      "file": "23-reference-node-runtime-settings.md",
+      "note": "outside the create-nodes tree on purpose - workflow-builder-facing runtime/settings docs, needed to correct a runtime-behavior claim; see lessons_from_past_refresh_mistakes"
+    },
+    {
+      "url": "https://docs.n8n.io/integrations/builtin/handle-rate-limits.md",
+      "file": "23-reference-node-runtime-settings.md",
+      "note": "same reason as above; also documents the batching UI shape referenced in 22-reference-batching.md"
+    },
+    {
+      "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line",
+      "file": "10-reference-credentials-files.md",
+      "note": "outside the create-nodes tree on purpose - confirms the `n8n import:credentials --input=<file.json>` / `export:credentials --all --decrypted` CLI commands, source for the env-var credential-seeding technique in the 'Testing credentials safely' section"
+    },
+    {
+      "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line",
+      "file": "12-test-your-node.md",
+      "note": "same page, also source for `n8n import:workflow --input=<file.json>` / `n8n execute --id <ID>` used in 'Scripting a repeatable end-to-end check' - page only documents the bare --id flag for execute, no output-format/exit-code contract, flagged as such in that section"
+    }
+  ],
+  "non_docs_repos_checked": [
+    {
+      "repo": "github.com/n8n-io/n8n (PR #19660, and eslint-plugin-community-nodes package)",
+      "checked_for": "whether npm run lint / npx @n8n/scan-community-package (same @n8n/eslint-plugin-community-nodes under the hood) mechanically enforce 19-reference-ux-guidelines.md's copy/naming rules",
+      "finding": "Superseded 2026-10-11 by reading the installed @n8n/eslint-plugin-community-nodes@0.31.0: recommended config now has 42 rules (recommendedWithoutN8nCloudSupport: 40), grouped in 19-reference-ux-guidelines.md. The original 10-rule snapshot (PR #19660) was already stale when written. Conclusion unchanged after checking each copy-sounding rule against its own meta.messages: still no rule checks Title Case/CRUD-string/punctuation/placeholder copy (valid-description = package.json description; resource-operation-pattern = only >5 ops without resources). Copy rules exist only in third-party eslint-plugin-n8n-nodes-base. Also found: package-level rules key off context.filename.endsWith(\"package.json\") and need the TS parser, so a config matching only **/*.ts silently skips them - see 14-node-linter.md. | 2026-10-17: v0.35.0 has 44 rules; new: no-unsafe-connection-type-cast (error, no as never/any/unknown casts on inputs/outputs), valid-node-categories (error, codex categories from the 10-value list, which matches 09-reference-codex-files.md). Still no UX-copy rule.",
+      "checked": "2026-10-17",
+      "rule_snapshot": {
+        "note": "Rule names of the recommended config at the version checked. scripts/check-skill.mjs --package <node package> reports installed rules missing from this list. For each new rule, read its messages, decide whether it checks UX copy (reference 19's claim) or affects a build (reference 14/19 build-relevant list), then replace this list.",
+        "version": "0.35.0",
+        "rules": [
+          "ai-node-package-json",
+          "cred-class-field-icon-missing",
+          "cred-class-oauth2-naming",
+          "credential-documentation-url",
+          "credential-password-field",
+          "credential-test-required",
+          "credential-unnecessary-password",
+          "icon-prefer-themed-variants",
+          "icon-validation",
+          "missing-paired-item",
+          "n8n-object-validation",
+          "no-builder-hint-leakage",
+          "no-credential-reuse",
+          "no-dangerous-functions",
+          "no-dead-files",
+          "no-deprecated-workflow-functions",
+          "no-emoji-in-options",
+          "no-forbidden-lifecycle-scripts",
+          "no-hardcoded-secrets",
+          "no-http-request-with-manual-auth",
+          "no-overrides-field",
+          "no-restricted-globals",
+          "no-restricted-imports",
+          "no-runtime-dependencies",
+          "no-silent-error-swallowing",
+          "no-template-placeholders",
+          "no-unsafe-connection-type-cast",
+          "node-connection-type-literal",
+          "node-registration-complete",
+          "node-usable-as-tool",
+          "package-name-convention",
+          "require-files-array",
+          "require-homepage",
+          "require-node-api-error",
+          "require-node-description-fields",
+          "require-version",
+          "resource-operation-pattern",
+          "trigger-node-conventions",
+          "valid-author",
+          "valid-credential-references",
+          "valid-description",
+          "valid-node-categories",
+          "valid-peer-dependencies",
+          "webhook-lifecycle-complete"
+        ]
+      }
+    },
+    {
+      "repo": "github.com/n8n-io/test-workflows",
+      "checked_for": "whether its /workflows/*.json fixtures are a good source to copy for a community node's own e2e fixture",
+      "finding": "no LICENSE file (confirmed via `gh api repos/n8n-io/test-workflows --jq '.license'` -> null); /workflows is flat numbered files (1.json...196.json) with no per-node naming or organization, built for n8n's own bundled nodes. Recommendation in 12-test-your-node.md is to export your own fixture from a working manual run instead of copying from here.",
+      "checked": "2026-09-06"
+    },
+    {
+      "repo": "github.com/n8n-io/n8n (packages/nodes-base)",
+      "checked_for": "whether adding n8n-nodes-base as a devDependency would expose its internal Jest test harness (testWorkflows, fixture+nock pattern) for reuse",
+      "finding": "no - its package.json `files` field is exactly [\"dist\", \"aws-credentials.js\"], so the published npm tarball excludes `test/` entirely; the harness only exists in the GitHub repo, never ships to npm",
+      "checked": "2026-09-06"
+    }
+  ],
+  "source_code_references": {
+    "note": "n8n-io/n8n file paths cited directly as sources when docs.n8n.io didn't cover a runtime-behavior question. Not docs.n8n.io URLs, so not fetchable via the normal WebFetch two-pass flow - re-verify with `gh` (GitHub CLI) read commands or a repo browse if these need re-checking.",
+    "last_verified": "2026-09-06",
+    "commit_verified_against": "33eb5c196e0ce3a2c71525929a4ef861cb94b168",
+    "files": [
+      {
+        "path": "packages/workflow/src/interfaces.ts",
+        "used_for": "PreSendAction/PostReceiveAction/INodeRequestSend/INodeRequestOutput type definitions",
+        "referenced_from": "21-reference-routing-hooks.md"
+      },
+      {
+        "path": "packages/core/src/execution-engine/routing-node.ts",
+        "used_for": "RoutingNode - confirms preSend/postReceive run as real functions with no serialization step in between, and confirms the requestOptions.batching.batch.{batchSize,batchInterval} throttle hook",
+        "referenced_from": "21-reference-routing-hooks.md, 22-reference-batching.md"
+      },
+      {
+        "path": "packages/core/src/execution-engine/workflow-execute.ts",
+        "used_for": "getRetryParams() and the retry loop - confirms Retry On Fail reads only node.retryOnFail/maxTries/waitBetweenTries and never failure.cause | NOTE 2026-10-17: installed n8n 2.37.10 compiled workflow-execute.js has no getRetryParams(); the same clamps (maxTries 2..5 default 3, wait 0..5000 default 1000) are inline in the node loop. Re-check the function name against current source on the next source pass.",
+        "referenced_from": "23-reference-node-runtime-settings.md"
+      },
+      {
+        "path": "packages/cli/src/workflows/triggers/poll-backoff-policy.ts",
+        "used_for": "the only actual runtime consumer of failure.cause/retryAfterMs/resetsAtEpochMs, scoped to polling-trigger backoff only",
+        "referenced_from": "23-reference-node-runtime-settings.md"
+      },
+      {
+        "path": "packages/frontend/editor-ui/src/features/ndv/shared/ndv.utils.ts",
+        "used_for": "createCommonNodeSettings() - confirms node-instance settings apply identically regardless of declarative/programmatic style",
+        "referenced_from": "23-reference-node-runtime-settings.md"
+      },
+      {
+        "path": "packages/cli/src/commands/import/credentials.ts",
+        "used_for": "readCredentials() - confirms the import:credentials JSON shape ({id,name,type,data,...}) and that a plaintext `data` object is auto-encrypted via cipher.encryptV2() on import, not written to the DB in plaintext",
+        "referenced_from": "10-reference-credentials-files.md"
+      },
+      {
+        "path": "packages/core/src/execution-engine/node-execution-context/utils/create-node-as-tool.ts",
+        "used_for": "confirms usableAsTool-invoked node execution runs through a distinct path from ordinary action-node execution",
+        "referenced_from": "23-reference-node-runtime-settings.md",
+        "commit": "e8b8694a5061e926a6db1c8748faea976d93edba (checked separately from this block's commit_verified_against, on 2026-09-06)"
+      },
+      {
+        "path": "packages/core/src/execution-engine/node-execution-context/utils/get-input-connection-data.ts",
+        "used_for": "makeHandleToolInvocation() - confirms the AI-tool path has its own try/catch and retry loop (maxTries/tryIndex), appends the original error's `description` to `message` on final failure, and re-throws to fail the whole agent run rather than returning an observation string to the model",
+        "referenced_from": "23-reference-node-runtime-settings.md",
+        "commit": "e8b8694a5061e926a6db1c8748faea976d93edba (checked separately from this block's commit_verified_against, on 2026-09-06)"
+      },
+      {
+        "path": "n8n-core/dist/execution-engine/routing-node.js (compiled, n8n@2.37.10 npm install; source equivalent packages/core/src/execution-engine/routing-node.ts)",
+        "used_for": "RoutingNode.prepareCredentials(): with credentials.length > 1, calls getNodeParameter(\"authentication\", 0) and matches against credentials[].displayOptions.show.authentication",
+        "referenced_from": "10-reference-credentials-files.md",
+        "commit": "not commit-pinned - read from installed n8n@2.37.10 on 2026-09-06; re-verify against n8n-io/n8n source on next source pass"
+      },
+      {
+        "path": "n8n-workflow/dist/node-helpers.js displayParameter()/getPropertyValues() (compiled, n8n@2.37.10)",
+        "used_for": "editor visibility check short-circuits to show when the stored value is an unresolved expression string (starts with \"=\") - cause of the duplicate credential row",
+        "referenced_from": "10-reference-credentials-files.md",
+        "commit": "not commit-pinned - read from installed n8n@2.37.10 on 2026-09-08"
+      },
+      {
+        "path": "n8n-core/dist/nodes-loader/custom-directory-loader.js + constants.js (compiled, n8n@2.37.10)",
+        "used_for": "nodes loaded from ~/.n8n/custom are registered under packageName CUSTOM_NODES_PACKAGE_NAME = \"CUSTOM\", so workflow node type is CUSTOM.<nodeName>; n8n execute loads custom dirs via LoadNodesAndCredentials.init() like n8n start",
+        "referenced_from": "12-test-your-node.md",
+        "commit": "not commit-pinned - read from installed n8n@2.37.10 on 2026-10-11, confirmed by a successful n8n execute run"
+      },
+      {
+        "path": "n8n-core/dist/nodes-loader/directory-loader.js applyDeclarativeNodeOptionParameters() + constants.js commonDeclarativeNodeOptionParameters (compiled, n8n@2.37.10)",
+        "used_for": "every declarative node gets an auto-injected requestOptions node setting (Batching, SSL, Proxy, Timeout); a node-declared requestOptions is replaced and only its options merged, so a node cannot default batching on",
+        "referenced_from": "22-reference-batching.md",
+        "commit": "not commit-pinned - read 2026-10-11, live-tested (Get 200ms -> 1592ms with batchSize 1 / interval 1500)"
+      },
+      {
+        "path": "n8n-core/dist/execution-engine/routing-node.js pagination branch (compiled, n8n@2.37.10) + n8n-workflow 2.16.0 IN8nRequestOperations types + n8n-nodes-base Brevo/ContactDescription.js",
+        "used_for": "declarative pagination: send.paginate + operations.pagination (offset/generic/function), output.maxResults, stop-on-short-page, no pause between pages; Return All + Limit convention (550 nodes-base files use returnAll)",
+        "referenced_from": "24-reference-pagination.md",
+        "commit": "not commit-pinned - read 2026-10-17, live-tested (104 results -> 2 calls 1180ms apart; Limit 30 -> 1 call)"
+      }
+    ]
+  },
+  "out_of_scope_but_linked": [
+    "/build/work-with-data/understand-n8ns-data-structure.md",
+    "/build/work-with-data/reference-data/link-data-items.md",
+    "/build/work-with-data/reference-data/link-data-items/how-items-link-through-workflows.md",
+    "/build/work-with-data/expressions-versus-data-nodes.md",
+    "/integrations/community-nodes/installation-and-management.md",
+    "/integrations/community-nodes/installation-and-management/install-verified-community-nodes.md"
+  ],
+  "known_gaps": [
+    "OAuth2 ICredentialType example: confirmed absent from every page in this doc tree (credentials-files.md's only real link is to node-ui-elements.md; the n8n-node CLI's 'new' wizard offers OAuth2 as an auth-method choice, so scaffolded code exists even though the written docs don't explain it - see 07c-node-cli-tool.md). Cross-reference an OAuth2 node/credential pair in packages/nodes-base of github.com/n8n-io/n8n, or read what the CLI itself generates.",
+    "base-files/programmatic-style-execute-method.md is confirmed to be a stub on n8n's own site (verified by explicitly asking whether it had real content) - not a fetch failure. Nothing to re-fetch there; the tutorial is the real source.",
+    "Multi-named-credential nodes: no known way to have both resource-driven automatic credential switching and a visible manual Authentication selector (10-reference-credentials-files.md). The frontend line that hides parameters referenced by credentials[].displayOptions.show was not pinned down - behavior confirmed only empirically.",
+    "OAuth2 credential (extends oAuth2Api) plus its own authenticate block for an extra static header: untested against a live OAuth2 authorization.",
+    "ux-guidelines.md AI-tool Output section: 19-reference-ux-guidelines.md was rewritten 2026-10-11 from build-session notes on the live page (2026-09-08) plus the Entra precedent and live-verified behavior, not from a fresh verbatim capture. On next Job 1 refresh, do a verbatim Pass B of that section and reconcile wording.",
+    "ux-guidelines.md has sections missing from 19-reference-ux-guidelines.md: Get Many vocabulary (object naming, omitting Many) and Sorting options, found 2026-10-17 by a targeted fetch whose quotes were added to 19. Do a full verbatim Pass B of the page on the next Job 1 refresh: two of its sections have now turned out to be under-captured."
+  ],
+  "audit_history": [
+    {
+      "date": "2026-09-05",
+      "what_happened": "First crawl pass (18 pages) used generic 'extract full detailed content' WebFetch prompts and missed real outgoing links on 9 of those pages, because a broad prompt lets the summarizing model drop link lists. A user question ('did you check previous pages for missing pages when it was guessed?') prompted a full second pass: re-fetched all 18 pages plus the base-files leaf pages with a strict 'list every markdown link verbatim' prompt. That surfaced 9 real pages that were completely missing from the skill: build-your-node/reference.md (index), .../reference/versioning.md, .../reference/error-handling.md, .../reference/item-linking.md, .../using-the-n8n-node-tool.md, .../reference/verification-guidelines.md, .../reference/ux-guidelines.md, .../tutorial-build-a-programmatic-style-node.md, and test-your-node/troubleshooting.md. All 9 have since been captured as new reference files.",
+      "confirmed_not_a_rate_limit": "The original 3 dead-end guesses (base-files/structure.md sibling guesses, credentials-files/oauth2.md) were verified to be genuine n8n application-level 404 pages (same 'Page Not Found' + 'Suggested Pages' template every time, instant response, no Cloudflare challenge screen) - not rate limiting."
+    },
+    {
+      "date": "2026-09-06",
+      "what_happened": "No docs.n8n.io page was re-crawled this session (last_full_refresh correctly stays 2026-09-05). Instead, targeted source-code/tooling research added several new findings and closed a gap in how the MusicBrainz plan used the skill: (1) a concrete env-var + `n8n import:credentials` credential-testing technique; (2) an e2e-testing section (`n8n import:workflow`+`n8n execute --id`) plus a 'which fixture workflows to build' set (single item, multi-item/batching, trigger, AI-tool); (3) confirmation that the official current lint/scan tooling doesn't check most UX copy rules (only a separate third-party plugin does); (4) usableAsTool guidance added directly at the tutorial templates' `usableAsTool: true` lines, not just in the reference file that already documented the field; (5) a new AI-tool-invocation error/retry path finding (create-node-as-tool.ts/get-input-connection-data.ts) showing tool-invoked failures kill the whole agent run rather than becoming a retryable observation. A stability-caveat audit was then run across every entry in `source_code_references` (prompted by a user question, 'are you sure it should belong in the codex?') and the PR #19660 lint-rule-count finding, adding caveats to the four that lacked one.",
+      "note": "This is why `source_code_references.last_verified` (added this session) exists as a separate date from `last_full_refresh` - the two describe genuinely different kinds of staleness (docs-tree content drift vs. n8n-io/n8n internal-implementation drift) and updating one should never be read as updating the other. See SKILL.md's 'Re-verifying source-derived findings' for the check this drives."
+    },
+    {
+      "date": "2026-10-11",
+      "what_happened": "No docs re-crawl (last_full_refresh stays 2026-09-05) and no n8n-io/n8n source re-verification (last_verified stays 2026-09-06). Folded findings from building n8n-nodes-musicbrainz (2026-09-06..09) into references: 07c (CLI wizard needs TTY, single auth method only, what hand-builds must add); 10 (multi-credential rules: parameter named authentication required, must not be an expression, is hidden from the panel; design options table; OAuth2+authenticate unconfirmed); 11 (resourceLocator $parameter is already the plain string, .value silently yields empty); 14 (working eslint.config.mjs for hand-built packages; minimal config silently skips package.json rules - verified 2026-10-11 by surfacing a real hidden valid-author error); 19 (rule list 10 -> 42 from installed v0.31.0; full AI-tool Output section); 21 (IExecuteSingleFunctions.getNodeParameter has no itemIndex; undefined in qs serializes as \"undefined\"; console.log preSend diagnostic, with note that no lint rule catches leftover console). SKILL.md: multi-credential question added to Step 1, CLI caveat in Step 3, silent-failure checklist after Step 3, lint/diagnostic notes in Step 7, editor-display as a third claim category in Ground rule. One draft claim (no-restricted-globals blocks console) was checked against the rule source before saving and found false; text corrected.",
+      "note": "Prior memory note had speculated that copy-named lint rules (valid-description, resource-operation-pattern, ...) might enforce UX copy rules; checking their meta.messages showed they do not."
+    },
+    {
+      "date": "2026-10-11",
+      "what_happened": "From-scratch rebuild of the MusicBrainz node: a hand-written e2e fixture failed with Unrecognized node type, first misdiagnosed as n8n execute not loading custom nodes. The user asked for the root cause: nodes in ~/.n8n/custom register as CUSTOM.<name>, not <package>.<name>. Added to 12-test-your-node.md along with the --rawOutput parsing note. The e2e run also confirmed that the engine sets pairedItem on items split out by postReceive."
+    },
+    {
+      "date": "2026-10-11",
+      "what_happened": "At the user request, researched how a declarative node enables batching. docs.n8n.io has nothing for node authors (declarative-style-parameters.md and integrations/builtin/rate-limits checked). Installed n8n-core source showed the loader injects a Request Options > Batching node setting into every declarative node automatically. Rewrote 22-reference-batching.md: the old text said a node \"can expose that same batching fixedCollection shape under its own operation options\", which is wrong; no authoring is needed, and the default cannot be set by the node. Live-tested pacing via the e2e fixture."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "Added a known-good tsconfig.json + jest.config.js to 07c-node-cli-tool.md for hand-built packages. Reason: the skill had no tsconfig guidance, and both MusicBrainz builds (2026-09 and 2026-10-11) independently hit TS5107 (moduleResolution node deprecated, a hard error in TypeScript 6) and ts-jest TS151002, landing on the same fix (node16 + isolatedModules). Verified from a clean dist with TS 6.0.3: CJS output, assets copied, 23 tests with no TS151002, lint clean, and a successful n8n 2.37.10 execute run."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "User asked to investigate an apparent Retry On Fail failure (a 503 on Get Many with runData showing one entry). It was a misreading: retries run inside one node run, so runData has one entry however many attempts there were. Get Many executionTime was 4284ms (3 tries x 2000ms wait). Confirmed via a forced-400 workflow with N8N_LOG_LEVEL=debug: 3 started/finished-with-error pairs 1.5s apart. Added to 23-reference-node-runtime-settings.md: the clamps as read from 2.37.10, all errors retried including 4xx, about 20s maximum patience against rate limits, and how to observe retries. Pointer added in 12-test-your-node.md."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "At the user request (\"don't be afraid of bundling files templates with the skill\"), added templates/ holding the verified project files from the MusicBrainz rebuild, plus a new e2e HTTP-call-count check (user idea: count HTTP calls rather than infer from timing/logs; implemented at the engine level, since a mocked node interface cannot observe engine retries). Each template was verified: the project uses the e2e template verbatim apart from CONFIG (1 and 3 calls PASS; a mutant expecting 2 FAILs with exit 1); the unfilled template refuses to run; the generic output helper test passes 7/7 inside the project. SKILL.md Step 3 and Step 7, 07c, 12, 14 and 19 now point to the templates instead of carrying duplicate code blocks."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "Folded the last two regeneration gaps. (1) Lint: 19 updated to v0.35.0 (44 rules) with the two new rules described from their meta. (2) Pagination: docs have none (checked ux-guidelines and node-ui-design); new 24-reference-pagination.md from n8n-workflow types, compiled routing-node.js, and the Brevo precedent. Finding: built-in offset/generic pagination does not pause between pages, so a rate-limited API needs the function form. Added template actions/pagination.ts (Return All + Limit builder, paginateWithDelay) with 5 unit tests. Live-tested on MusicBrainz Search: 2 calls 1180ms apart for 104 results; Limit 30 -> 1 call."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "At the user's request (\"investigate what you've been trying in command to make recommendation in tooling or prebuilt script\"), reviewed the session's shell commands for repeated work and failures, and added builder tools in scripts/: scaffold.mjs, check-package.mjs, n8n-run.mjs, n8n-source.mjs, lint-rules.mjs, check-skill.mjs, sources-add.mjs (+ lib.mjs), plus references/25-tooling-and-environment.md (tool table + Windows/Git Bash pitfalls: python Store stub hangs, backticks/$ in `node -e` and heredocs, Windows paths need cygpath -m and file:/// for ESM import, cwd can't be mv'd, n8n .cmd shim + DEP0190). Each tool was tested: check-package passes the MusicBrainz project and fails `.old` on its two real defects; n8n-run parses success, failure and --debug output (fixed: debug mode wraps the execution JSON in ANSI codes); check-skill caught a deliberately broken anchor; scaffold + MusicBrainz service files passed check-package with the hand-built file set. Scaffold testing found a template bug: @n8n/eslint-plugin-community-nodes 0.31.0-0.35.1 peer-pins eslint \"9.29.0\" exactly, so eslint ^9.39.5 fails a fresh npm install (ERESOLVE); template and project now pin 9.29.0. Also observed: npm's `latest` tag for n8n-workflow is stale (2.16.0 vs stable 2.43.5)."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "User asked why the skill had lint-rules.mjs when n8n bundles a node linter. It never linted anything (npm run lint does, via check-package.mjs); it diffed the plugin's rule names against reference 19's 44-name prose list, which only existed to keep the claim \"no rule checks UX copy\" current. Removed lint-rules.mjs. The rule list now lives as data in non_docs_repos_checked[].rule_snapshot (v0.35.0, 44 rules), and check-skill.mjs --package <node package> reports added/removed rules with their messages (exit 1). Tested: clean on MusicBrainz (0 new), a snapshot with valid-node-categories removed reported it with its messages and exited 1, and a dir without the plugin exited 1. Reference 19's tooling section is now: no rule checks copy, where the list lives, and the rules a build actually runs into (package.json coverage, eslint 9.29.0 peer pin, no-unsafe-connection-type-cast, valid-node-categories, node-usable-as-tool, cred-class-oauth2-naming). Anchor kept."
+    },
+    {
+      "date": "2026-10-17",
+      "what_happened": "Second from-scratch regeneration of n8n-nodes-musicbrainz (previous build kept in n8n-nodes-musicbrainz.prev) to test the skill. scaffold.mjs + the references produced a package that passed check-package.mjs on the first run (build, lint, 27 unit tests) and worked live through n8n 2.37.10: Search/Get/Get Many fixture (4 HTTP calls, Lucene escaping, inc only when set, Selected Fields keeps id, pairedItem per item), Return All over 213 results in 3 pages about 1.1 s apart, and npm run test:e2e (1 and 3 calls). One gap found: nothing in SKILL.md's steps led to a package README or to telling users about batching, although reference 22 says a rate-limited declarative node should (README plus operation descriptions). Fixed: templates/PACKAGE_README.md (scaffold copies it as README.md; Credentials/Operations/Rate limit placeholders), check-package fails without README.md, on its placeholders or on leftover guidance comments, and SKILL.md gets a gotcha bullet (notice property + README) and a Step 6 paragraph. Also fixed: check-package's placeholder regex didn't allow ':' so the package.json description placeholder \"__One sentence: ...__\" could pass unfilled. Fresh npm install resolved @n8n/eslint-plugin-community-nodes 0.35.1; check-skill --package showed no rule changes from the 0.35.0 snapshot. One 503 during the Return All test came from the session's own probe requests and cleared after a 15 s pause (reference 25's advice held)."
+    },
+    {
+      "date": "2026-10-20",
+      "what_happened": "Cold-build test: a subagent with no conversation context built n8n-nodes-musicbrainz from the skill alone (now in n8n-nodes-musicbrainz; the in-session build is n8n-nodes-musicbrainz.regen2). It passed check-package, live fixtures and test:e2e, after two reworks the skill caused. Fixes folded in on 2026-10-20: (1) WRONG RULE: \"$parameter.<resourceLocator> is already the plain string\" is false for By URL mode: the expression gives the whole URL because extractValue is only applied by getNodeParameter(name, undefined, { extractValue: true }) (n8n-core 2.37.10 node-execution-context.js, utils/extract-value.js; regex needs exactly one capture group). Rewrote SKILL.md gotcha and reference 11; new template actions/resourceLocator.ts (buildResourceLocator, setUrlFromLocator preSend, createListSearch factory with the empty-filter guard; 9 tests; scaffold --resource-locator). Live-verified in .regen2: By URL request went to /artist/<mbid>. (2) Credential icon required by lint (cred-class-field-icon-missing, icon-validation) but missing from references 10 and 07: added a Credential icon section, notes in 07 and 04, and scaffold's to-do line. (3) Output template dropped Include data in Simplified mode: outputSingle/outputList take include { parameter (dotted path ok, lodash get), responseKeys }; 10 tests; live-verified (rating, relations kept). (4) check-package printed only the lint count: now prints file:line, severity, message and rule (proved with a credential without icon). (5) Reference 12: hand-written fixtures with n8n-run are fine when the editor isn't available; AI Agent fixture needs an LLM credential. (6) Reference 09: n8n's loader reads only categories/subcategories/alias/resources from the codex; node/nodeVersion/codexVersion are ignored, and a missing resources key drops the whole codex. Also hit reference 25's backtick pitfall twice while editing (node script in heredoc; regex escaping lost in a template literal) and used the Write tool instead."
+    },
+    {
+      "date": "2026-10-20",
+      "what_happened": "Second cold-build test (subagent, no context; build now in n8n-nodes-musicbrainz, first cold build moved to .cold1). The previous round's fixes held: credential icon (lint passed first time), Output include option, setUrlFromLocator in all three modes, createListSearch, README template, pagination, batching notice. New defects found and fixed on 2026-10-20: (1) the new resourceLocator template used one regex for validation and extractValue, but n8n tests validation as ^<regex>$ (n8n-workflow node-helpers.js validateResourceLocatorParameter; values starting with \"=\" skip it), so any URL with a path/query/slash after the ID was rejected (WorkflowHasIssuesError). Template now takes urlRegex up to the ID and appends urlTail (default (?:[/?#&].*)?) for validation only; ID/URL regexes wrapped in (?:...) so alternations stay anchored; tests now validate like n8n (21 tests; 6 fail against the old template). Live: .regen2 accepted .../artist/<id>/relationships?tab=1. The template test had given false confidence: it only tested extraction. (2) n8n-run.mjs showed only \"No active execution found\" for such workflows: it now reads the newest execution of the workflow created during the run from ~/.n8n/database.sqlite (read-only, node:sqlite, n8n's bundled flatted) and prints the stored error; verified with an invalid-ID fixture (exit 1). (3) check-package's type printer took every export as the node class: now looks up the export named like the file up to its first dot, as n8n-core's loadClass does. (4) Docs: reference 11 (anchoring, expression bypass, escaping picker search text for query languages), reference 12 (fixtures in test/fixtures/, one fixture per shape with several operations, Wait node 1.1 spacing, under 65 s stays in-process per Wait.node.js, \"No active execution found\"), reference 25 (same, plus credential field names and: the user's email never goes into a User-Agent or API request; the subagent sent it once in a curl check)."
+    },
+    {
+      "date": "2026-10-20",
+      "what_happened": "Third cold-build test (subagent, no context; build now in n8n-nodes-musicbrainz, second cold build moved to .cold2). The node itself came out right first time: check-package clean on the first run (51 tests), all three resource locator modes live including By URL with /relationships?tab=1, include data kept, Return All, batching, test:e2e, and the User-Agent carried no email. Main finding: SKILL.md, templates/README.md and references/11 were corrupted by my 2026-10-20 edits. String.replace expanded \"$`\" (text before the match) in replacement strings containing `^…$`, pasting each file's beginning mid-line (ref 11 twice); links and paths stayed valid, so check-skill said OK. Repaired by removing the pasted copies, keeping each replacement text, with the removed lengths checked against the match positions (SKILL.md exact; the other two differ only by edits made after the corruption); corrupted copies kept in the session scratchpad. check-skill now flags a file containing a copy of its own first 120 characters, or more than two repeated long lines (proved on the corrupted copies: all three flagged). Reference 25 documents the pitfall: use t.replace(a, () => b) or split/join. Also fixed: http-counter.cjs records chosen request headers (E2E_HTTP_HEADERS), n8n-run --headers prints them (verified live: user-agent without email), n8n-run keeps an existing NODE_OPTIONS and documents its --json shape; reference 12 notes executeOnce for nodes after a list operation and the header check; reference 25 notes 2-3 s Waits plus 30-40 s pauses between runs for MusicBrainz, and how to pause when sleep is blocked; reference 21 notes '+' is sent as %2B; retry.e2e.cjs comment shows the __rl shape."
+    },
+    {
+      "date": "2026-10-20",
+      "what_happened": "First build of a new service with the updated skill: n8n-nodes-discogs (2026-10-20). Discogs developer docs answer 403 behind a Cloudflare challenge, so endpoint shapes and rate limits were taken from the API itself (api.discogs.com root and planned endpoints; x-discogs-ratelimit 25 unauthenticated, 60 with a token). Declarative, usableAsTool (user rule since 2026-10-20: action nodes always are AI tools), read-only: Release (Get, Search), Master Release (Get, Get Versions, Search), Artist and Label (Get, Get Releases, Search), Marketplace (Get Release Statistics). check-package clean on the first run (62 tests). Live, first run: all 12 operations, all three picker modes including URLs with slugs, /fr/ and query strings; Return All over 190 results in 2 page-number pages 1569 ms apart; the built list pickers against the live API (empty filter makes no request, page token 2); test:e2e 1 and 3 calls. Skill gaps found and fixed: (1) pagination.ts and createListSearch only paged by limit/offset: both now take page-number paging ({ style/paging: 'page', limitParameter: 'per_page' }), with tests; (2) no reusable way to seed a test credential: new templates/scripts/seed-credential.cjs (CONFIG maps credential fields to env vars, reads .env, masks secrets), verified both ways, check-package fails on its unfilled CONFIG; (3) templates/.gitignore lacked .env; (4) every package's e2e test used workflow ID e2eRetryCount0001, so packages overwrote each other's test workflow: template now uses e2e__NodeName__Retry01, filled by scaffold; (5) reference 13: on Windows a directory junction adds a second package to ~/.n8n/custom without the npm install that npm link runs there; (6) reference 25: Git Bash rewrites arguments starting with / (MSYS_NO_PATHCONV=1), and probe the API when docs are behind a bot check. The user pasted the Discogs token in chat; it was written to .env with the Write tool and never echoed."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "User rule (2026-10-25): node icons use the service's real logo; reusing it to identify the service in a personal, non-commercial package is fine. New scripts/fetch-icon.mjs takes the logo from Simple Icons at a pinned release, writes <name>.svg in the brand colour (#333333 if too light for white) and <name>.dark.svg (white if too dark for n8n's dark canvas), prints a README attribution line, and --search finds slugs. Verified: reproduced the Discogs icon path exactly; Medium (#000000) and Advent of Code (#FFFF66) exercise both fallbacks; an unknown slug exits 1 with the placeholder fallback advice. SKILL.md Step 3, reference 04 (Icons), reference 25 (tool table) and scaffold's to-do line now point to it; the old 'don't silently invent a generic icon / trademark check first' default is replaced by: placeholder only when the brand isn't in Simple Icons, brand-guidelines check only before publishing. n8n-nodes-discogs now uses the real Discogs logo."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "User rule (2026-10-25): \"Do not draw. Ask the user to provide\". When a brand isn't in Simple Icons, the skill no longer draws a labelled placeholder: it asks the user for the logo file (SVG, or 60x60 PNG, plus a dark variant if available). Updated SKILL.md Step 3, reference 04 (Icons) and fetch-icon.mjs's not-found message (verified with an unknown slug)."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "User rule (2026-10-25): \"Do not use the memory. The goal is to have a reusable skill. Memory defeats this.\" Rules that had lived only in Claude Code memory moved into SKILL.md: a new 'Improving this skill' section (everything a future build needs goes in the skill, never in memory, including rules the user states mid-build; bundle real files in templates/ and scripts/; verify with a run that proves it can fail; test cold with a context-free subagent that reports instead of editing) and 'No ad hoc research mid-build' next to the Ground rule (record gaps with sources-add.mjs gap; target-API facts in Step 1, Job 1 and local n8n-source.mjs reads excepted). Project-specific facts moved into the packages' READMEs (MusicBrainz: read-only design notes; Discogs: local test setup and scope). The memory files were moved out of use to ~/.claude/memory-archive-2026-10-25/."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "MusicBrainz node expanded from Artist only to the 11 core entities with lookup, search and browse (area, artist, event, instrument, label, place, recording, release, release group, series, work), from https://musicbrainz.org/doc/MusicBrainz_API#Linked_entities and live probes (list keys, which entities take inc=ratings: series rejects it with 400). One generic builder over an entity table. Live 2026-10-25: all 16 fixture operations in one run, test:e2e 1 and 3 calls, 66 unit tests. Skill change: paginateWithDelay got { untilEmpty: true } for APIs that return short pages mid-list (MusicBrainz release browse caps pages at 500 tracks; its docs say to advance offset by the records returned): offset advances by records returned and stops on an empty page; 2 new tests (10 in pagination.test.ts); live: offset=0 returned 95, offset=95 returned 0. Reference 24 and templates/README.md document it. MusicBrainz answered 503 to probes even 2 s apart after a burst; reference 25's pacing advice stands."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "API depth guidance (user request after the MusicBrainz expansion, 2026-10-25). SKILL.md Step 1: map the whole API surface (resources x request kinds) from docs plus a short probe, show it as a table, let the user pick, instead of starting from 'a handful of operations' (the MusicBrainz node had stayed Artist-only). New 'Mapping the API' subsection: uniform APIs get an entity table with a generic builder; find links the docs don't list from *_url / resource_url / uri / pagination.urls / nested IDs / relations (Discogs versions_url and releases_url became operations) and from doc tables and footnotes; probe parameter values (400s name invalid ones; a 200 doesn't prove support, e.g. MusicBrainz area accepts inc=ratings with no data); check that operations chain (every ID output accepted by some input). Reference 25: how to probe (spaced fetch script, retry a 503 once, print keys, tokens from .env)."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "Freebox OS mapping (2026-10-25) surfaced an engine fact now in reference 10 ('Session-based APIs: preAuthentication and when it refreshes'): from n8n 2.37.10 credentials-helper.js and request-helpers/authentication.js, a credential's preAuthentication runs only when its hidden expirable field is empty, when testing, or after an HTTP 401; the result is persisted into the stored credential. APIs that signal an expired session with another status (Freebox: 403 auth_required) are never refreshed, so they need a programmatic node that opens its own session."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "Freebox node built 2026-10-25 (n8n-nodes-freebox): first programmatic, session-based node. API mapped from the box's own docs (/doc/index.html, API 16.1; dev.freebox.fr is at 4.0) and live probes. Read-only: devices, connection, Wi-Fi (password stripped), DHCP leases, downloads, calls, voicemail, contacts, system. Own session handling (403 auth_required, see reference 10). Live: 16 operations in one fixture run on one session; test:e2e 1 and 3 calls; 22 unit tests against a fake box. Reference 10 gained 'Credential tests that need more than one request (testedBy)': CredentialTestContext only offers the legacy request helper, so no-deprecated-workflow-functions is disabled on that one line with a reason. Icon: Freebox isn't in Simple Icons, so per the rule the user was asked for the logo."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "User rule (2026-10-25, Freebox): \"If you can't find the icon, try the one from Wikipedia\". Reference 04 (Icons): when the brand isn't in Simple Icons and the user agrees, take the official logo used on the service's Wikipedia article from Wikimedia Commons (imageinfo API gives URL and licence), not a Commons search hit (a fan-made CC BY-SA \"FreeBox\" logogram came up first); keep the SVG paths unchanged, only square a wide wordmark's viewBox; check for script/href/embedded images; credit file, URL and licence in the README. Verified: n8n-nodes-freebox uses File:Freebox (logo).svg (public domain, #C70119); check-package all PASS including lint; n8n serves the icon (HTTP 200, image/svg+xml)."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "Freebox node got low-risk write operations (user request 2026-10-25): device rename/wake, Wi-Fi pause/resume/schedule, download add/update/speed mode, call and voicemail mark as read, parental control get/set access, player list/media control/volume. Skill changes, SKILL.md: Step 4b, check every parameter that goes into a URL path (an expression that resolves to nothing became call/log/undefined in a live run, and the API's 404 hid it; Number('') is 0); Step 7, how to test write operations (unit-test each request's method, path, body and encoding; live-test only no-op writes, refused writes, or writes you undo after checking they're yours; tell the user; don't count on the API rejecting bad input, since the Freebox accepted a missing download folder and created a task, which was then deleted). Verified: n8n httpRequest sends a pre-encoded URLSearchParams string with Content-Type application/x-www-form-urlencoded as-is (the box parsed download_url and the base64 download_dir); 31 unit tests; check-package all PASS; read fixture and test:e2e unchanged."
+    },
+    {
+      "date": "2026-10-25",
+      "what_happened": "Self-checking fixtures (user design 2026-10-25: \"use if condition and stop and errors\"). New templates: test/fixtures/checks.cjs (buildChain inserts an If node after each step and a Stop and Error node on its false branch whose message names the step and only the failed checks; check.noError/atLeast/count/hasKeys/onlyKeys/neverKey/failsWith/expr; waitSeconds adds Wait nodes; settings applies node settings such as Retry On Fail to every step) and test/fixtures/run.cjs (npm run test:fixtures: resolves \"auto\" credentials, imports and runs each fixture with n8n execute, PASS/FAIL with the Stop and Error message, 5 s pause between fixtures, exits 1 on failure or no fixtures). Template package.json and PACKAGE_README gained test:fixtures; scaffold copies both files (verified). Reference 12: new \"Self-checking fixtures\" section; n8n execute's exit code on a failed workflow is now verified (exit 1, message as last non-stack line). SKILL.md Step 7 points to it. Verified 2026-10-25 on n8n 2.37.10: Freebox (17 read checks + safe writes), Discogs (12) and MusicBrainz (16 plus two older fixtures, which needed Retry On Fail for 503s) all PASS; a fixture expecting a missing key failed with exit 1, named the step and check, and later steps did not run. MusicBrainz answers 503 even with 2.5 s Wait nodes after a burst: fixtures for it need retryOnFail."
+    },
+    {
+      "date": "2026-10-28",
+      "what_happened": "Publishing (user request 2026-10-28: \"It should always be included\"). New templates: .github/workflows/publish.yml (on a vX.Y.Z tag: npm ci, tag must match package.json, lint, build, test, npm publish --provenance --access public; OIDC trusted publishing, NPM_TOKEN fallback; adapted from n8n-nodes-starter's publish.yml, which runs n8n-node release instead) and LICENSE (MIT, __Year__ and __Author Name__ filled by scaffold). check-package.mjs gained a \"licence and publish workflow\" check (license MIT, LICENSE file, publish.yml with --provenance); verified it fails on a scaffold without the workflow. Scaffold copies both (verified). Reference 16 and SKILL.md Step 8: a local npm publish never counts for verification; npm now requires 2FA to publish (--otp, or a bypass-2FA granular token whose publishes are held as staged, 0.0.0-stage placeholder, until approved on npmjs.com; observed 2026-10-28); never let the user paste tokens into the chat. SKILL.md Step 3: never invent the --author name (a username had been split into an invented first and last name). The workflow itself is not yet run end to end: it needs the Trusted Publisher set on npmjs.com."
+    },
+    {
+      "date": "2026-10-28",
+      "what_happened": "Correction 2026-10-28: the 0.0.0-stage placeholder was not a staged publish awaiting approval; 0.1.0 of all three packages went live minutes later without any approval. Reference 16 corrected."
+    },
+    {
+      "date": "2026-10-28",
+      "what_happened": "npm trust github sets the Trusted Publisher from the CLI (npm 11.17); it requires the 2FA code (403 with a bypass-2FA token) and warns when package.json's repository casing differs from --repo. Reference 16 updated; package repository URLs now use the exact GitHub owner casing."
+    },
+    {
+      "date": "2026-11-01",
+      "what_happened": "templates/jest.config.js now ignores /.claude/ (testPathIgnorePatterns): a package that vendors this skill under .claude/skills would otherwise run the templates' tests. Verified in n8n-nodes-musicbrainz (108 -> 66 tests)."
+    }
+  ],
+  "lessons_from_past_refresh_mistakes": [
+    "Never guess a sibling/child URL by pattern-matching a filename. Always fetch the parent page first with a prompt like 'list every markdown link verbatim as [text](url), do not summarize or omit any' - generic 'extract full detailed content' prompts silently drop links roughly half the time, which is how 9 real pages got missed on the very first crawl of this skill.",
+    "Do the verbatim-link audit on EVERY page in sources.json when refreshing, not just the ones involved in a 404 - the two are independent failure modes (a 404 means a guessed URL is wrong; missing links on a 200-OK page is a separate, quieter failure that leaves no error to notice).",
+    "docs.n8n.io serves a real, consistent app-level 404 page (title 'Page Not Found', a 'Suggested Pages' list, no Cloudflare challenge) - if you hit that, don't assume rate-limiting; it means the exact path is wrong. Go back to the nearest real parent page and re-derive links from there.",
+    "When checking whether a topic (e.g. OAuth2) is truly undocumented vs. just unfetched, ask a precise 'quote verbatim any section about X' or 'list every link' question rather than a generic summarization question - the generic version once produced a misleading half-answer ('mentioned in the overview but not detailed here') for content that flatly doesn't exist on that page.",
+    "Runtime/engine-behavior claims (does X trigger automatic retry? can declarative style do Y at execution time? does throttling require hand-written code?) cannot be verified from the /connect/create-nodes/ authoring-docs tree alone, even exhaustively crawled - that tree covers how to author a node, never what the engine does with it afterward. Two false runtime claims were made in a single planning session this way: (1) 'declarative can't throttle between requests, so a rate-limited API forces programmatic style' - actually backwards, declarative gets a free engine-level batching throttle (see 22-reference-batching.md) that programmatic doesn't; (2) 'transforming data before/after a request forces programmatic style' - actually false, declarative's preSend/postReceive hooks handle single-request transformation including full body-format changes like JSON-to-XML (see 21-reference-routing-hooks.md); (3) 'throwing failure.cause: rate-limited triggers n8n's automatic retry' - false, that field is unread by the action-node retry path, only consumed by polling-trigger backoff (see 23-reference-node-runtime-settings.md). All three were caught only because a user directly challenged the claim rather than accepting it. When a plan asserts a *runtime* behavior, verify against a docs.n8n.io page outside /connect/create-nodes/ (e.g. the workflow-builder-facing 'work-with-nodes' or 'handle-rate-limits' pages) or against n8n-io/n8n source directly (routing-node.ts, workflow-execute.ts, interfaces.ts are the load-bearing files so far) - never present authoring-docs-derived inference as confirmed runtime fact.",
+    "A page can be captured with all its links intact but its CONTENT silently truncated to a one-line summary - ux-guidelines.md's AI-tool Output section was stored as one sentence when the live page had a full section (modes, rationale, ID-always-included default, contrasting Simplify section). Pass A (links) cannot detect this. In Pass B, compare each fetched section's length against the stored file; a stored file much shorter than its live source is a red flag, and for sections that specify behavior (defaults, required fields), ask for that section verbatim.",
+    "When an n8n CLI or engine command appears not to support something, check the input before blaming the tool: read the loader or command source first. Unrecognized node type for a custom node meant a wrong type prefix in a hand-written fixture (CUSTOM.<name> vs <package>.<name>), not a missing capability.",
+    "Don't infer \"retry never happened\" from n8n execution runData: each node's runData array has one entry per node run, not per Retry On Fail attempt. Check executionTime or N8N_LOG_LEVEL=debug per-attempt log lines before concluding a runtime feature failed.",
+    "Make every new check or script prove it can fail before trusting a PASS: run it once against a known-bad input (the .old project, a mutated expected count, a deliberately broken anchor)."
+  ],
+  "templates": {
+    "note": "Verified project files bundled in ../templates/ (see templates/README.md). Not docs captures: re-verify in a real package (build, lint, jest, npm run test:e2e) when bumping versions or when the docs/source passes change something they depend on.",
+    "last_verified": "2026-10-28",
+    "verified_with": {
+      "typescript": "6.0.3",
+      "n8n-workflow": "2.16.0",
+      "@n8n/eslint-plugin-community-nodes": "0.35.0",
+      "jest": "30.5.2",
+      "ts-jest": "29.4.14",
+      "n8n": "2.37.10"
+    },
+    "files": [
+      "package.json",
+      "tsconfig.json",
+      "jest.config.js",
+      "eslint.config.mjs",
+      ".gitignore",
+      "scripts/copy-assets.js",
+      "nodes/__NodeName__/actions/output.ts",
+      "nodes/__NodeName__/__tests__/output.test.ts",
+      "test/e2e/http-counter.cjs",
+      "test/e2e/retry.e2e.cjs",
+      "nodes/__NodeName__/actions/pagination.ts",
+      "nodes/__NodeName__/__tests__/pagination.test.ts",
+      "PACKAGE_README.md",
+      "nodes/__NodeName__/actions/resourceLocator.ts",
+      "nodes/__NodeName__/__tests__/resourceLocator.test.ts",
+      "scripts/seed-credential.cjs",
+      "test/fixtures/checks.cjs",
+      "test/fixtures/run.cjs",
+      "LICENSE",
+      ".github/workflows/publish.yml"
+    ]
+  }
+}

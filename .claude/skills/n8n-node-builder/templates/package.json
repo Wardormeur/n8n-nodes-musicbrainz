@@ -1,0 +1,54 @@
+{
+	"name": "n8n-nodes-__service__",
+	"version": "0.1.0",
+	"description": "__One sentence: what this community node does__",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/__owner__/n8n-nodes-__service__",
+	"author": {
+		"name": "__Author Name__",
+		"email": "__author@example.com__"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/__owner__/n8n-nodes-__service__.git"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc -p tsconfig.json && node scripts/copy-assets.js",
+		"dev": "tsc -p tsconfig.json --watch",
+		"lint": "eslint nodes credentials package.json",
+		"lint:fix": "eslint nodes credentials package.json --fix",
+		"test": "jest",
+		"test:e2e": "node test/e2e/retry.e2e.cjs",
+		"test:fixtures": "node test/fixtures/run.cjs"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/__NodeName__Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/__NodeName__/__NodeName__.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/eslint-plugin-community-nodes": "^0.35.0",
+		"@types/jest": "^30.0.0",
+		"@types/node": "^26.6.5",
+		"eslint": "9.29.0",
+		"jest": "^30.5.2",
+		"n8n-workflow": "^2.16.0",
+		"ts-jest": "^29.4.14",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.71.1"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
